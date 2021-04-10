@@ -55,13 +55,14 @@ feel that it is my responsibility to provide explanations of my work.
 %% Set up footer
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage[nodayofweek,level]{datetime}
 \fancypagestyle{CVfooter}
 {
  \lhead{}
  \chead{}
  \rhead{}
  \lfoot{\small{Huanfa Chen}}
- \cfoot{\small{Last Update: 8 Apr 2021}}
+ \cfoot{\small{Last Update: \today}}
  \rfoot{\small{\thepage/\pageref{LastPage}}}
  \renewcommand{\headrulewidth}{0.0pt}
  \renewcommand{\footrulewidth}{0.5pt}
@@ -209,7 +210,8 @@ Avoid using photos in academic CV
 \begin{center}
     \textbf{\Huge \scshape Huanfa Chen} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
     % \small +1 123-456-7890 $|$ 
-    \href{mailto:huanfa.chen@ucl.ac.uk}{\underline{huanfa.chen@ucl.ac.uk}} $|$\\
+    \href{mailto:huanfa.chen@ucl.ac.uk}{\underline{huanfa.chen@ucl.ac.uk}} $|$
+    \href{huanfachen.github.io}{\underline{https://huanfachen.github.io/}} $|$\\
     % Be sure to use a professional *personal* email address
     \href{linkedin.com/in/huanfa-chen}{\underline{linkedin.com/in/huanfa-chen}} $|$
     % you should adjust you linked in profile name to be professional and recognizable
@@ -415,15 +417,15 @@ are seeking
           \MScStduentItem{Thomas Keel}{MSc Spatial Data Science and Visualisation}{2019 -- 2020}
            {Thesis: Can we predict why people travel within a city? A cast study in Montreal, Canada}
           \MScStduentItem{Yang Zhou}{MSc Smart Cities and Urban Analytics}{2019 -- 2020}
-           {Thesis: Retail Centre Footfall: Planning and Forecasting Using Time Series Modelling}
+           {Thesis: Retail centre footfall: planning and forecasting using time series modelling}
           \MScStduentItem{Yafei Ye}{MRes Spatial Data Science and Visualisation}{2019 -- 2020}
-           {Thesis: Understanding Residents’ Attitudes Towards Services and Safety Issues by Geodemographics Based on City Survey Results}
+           {Thesis: Understanding residents’ attitudes towards services and safety issues by geodemographics based on city survey results}
           \MScStduentItem{Yunong Wang}{MSc Spatial Data Science and Visualisation}{2019 -- 2020}
-           {Thesis: Optimal Siting and Sizing of Electric Vehicle Charging Points: A Case Study in London}
+           {Thesis: Optimal siting and sizing of electric vehicle charging points: a case study in London}
           \MScStduentItem{Maria del pilar Mayora}{MSc Smart Cities and Urban Analytics}{2019 -- 2020}
-           {Thesis: An Environmental Bicycle Level of Service Index for the Buenos Aires Cycle Network}
+           {Thesis: An environmental bicycle level of service index for the Buenos Aires cycle network}
           \MScStduentItem{Ziyi Cheng}{MSc Smart Cities and Urban Analytics}{2019 -- 2020}
-           {Thesis: Exploring the Spatial Accessibility to Green Space in the Greater London Area}
+           {Thesis: Exploring the spatial accessibility to green space in the Greater London area}
 
 % If you want to add a new student, use the following template
         % \MScStduentItem{STUDENT_NAME}{MSc_PROGRAMME}{2019 -- 2020}
@@ -477,19 +479,20 @@ descriptions maintain the consistency from prior sections
 \end{comment}
 
 \section{Conferences and Presentations}
+\noindent \textbf{\ \ \underline{Invited Presentations}}
   \CVSubHeadingListStart
 %    \CVSubheading % Example
 %      {Work Presented}{When}
 %      {Occasion}{}
     \CVSubheading
-      {Photometric Filter Fidelity and Use for Be Star Identification}{November 2017}
-      {Austin College Physics Research Seminar}{}
+      {Geospatial machine learning: motivations and implications}{May 2020}
+      {Tianjin University [Online]}{}
     \CVSubheading
-      {Reflectometry for Volumetric Soil Moisture Measurement}{May 2017}
-      {Austin College Atmospheric Physics Fair}{}
-    \CVSubheading
-      {Design and Manufacturing of Products using 3D Printing}{April 2017}
-      {Austin College Student Scholarship Conference}{}
+      {Machine learning for urban analytics and transport studies}{March 2021}
+      {Chinese Academy of Surveying and Mapping [Online]}{}
+    % \CVSubheading
+    %   {Design and Manufacturing of Products using 3D Printing}{April 2017}
+    %   {Austin College Student Scholarship Conference}{}
   \CVSubHeadingListEnd
 
 %-----HONORS AND AWARDS--------------------------------------------------------
