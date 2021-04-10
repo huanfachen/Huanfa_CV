@@ -89,13 +89,19 @@ strokes, sans-serif fonts are sans (without) these strokes.
 % \usepackage[default]{sourcesanspro}
 
 %-----PAGE SETUP---------------------------------------------------------------
+% https://en.wikibooks.org/wiki/LaTeX/Page_Layout
 
 % Adjust margins
+% \usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in]{geometry} % margins
+% \usepackage{setspace}
+% \singlespacing % No more than 6 lines of text per inch
 \addtolength{\oddsidemargin}{-1cm}
 \addtolength{\evensidemargin}{-1cm}
 \addtolength{\textwidth}{2cm}
 \addtolength{\topmargin}{-1cm}
 \addtolength{\textheight}{2cm}
+\addtolength{\footskip}{20pt}
+% note the defatult footskip = 30 pt. Increasing the footskip will lower the position of the footer to the page bottom
 
 % %% Page and text formatting
 % \usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in]{geometry} % margins
@@ -131,6 +137,13 @@ strokes, sans-serif fonts are sans (without) these strokes.
   \item\small{
     {#1 \vspace{-2pt}}
   }
+}
+
+\newcommand{\MScStduentItem}[4]{
+  \item #1 (#2, #3)
+   \begin{itemize}
+    \textendash \ #4
+   \end{itemize}
 }
 
 \newcommand{\CVSubheading}[4]{
@@ -169,39 +182,39 @@ strokes, sans-serif fonts are sans (without) these strokes.
 Avoid using photos in academic CV
 \end{comment}
 
-\begin{minipage}[c]{0.05\textwidth}
-\-\
-\end{minipage}
-\begin{minipage}[c]{0.2\textwidth}
-\begin{tikzpicture}
-    \clip (0,0) circle (1.75cm);
-    \node at (0,-.7) {\includegraphics[width = 9cm]{portrait}}; 
-    % if necessary the picture may be moved by changing the at (coordinates)
-    % width defines the 'zoom' of the picture
-\end{tikzpicture}
-\hfill\vline\hfill
-\end{minipage}
-\begin{minipage}[c]{0.4\textwidth}
-    \textbf{\Huge \scshape{Charles Rambo}} \\ \vspace{1pt} 
-    % \scshape sets small capital letters, remove if desired
-    \small{+1 123-456-7890} \\
-    \href{mailto:you@provider.com}{\underline{you@provider.com}}\\
-    % Be sure to use a professional *personal* email address
-    \href{https://www.linkedin.com/in/charles-rambo/}{\underline{linkedin.com/in/charles-rambo}} \\
-    % you should adjust you linked in profile name to be professional and recognizable
-    \href{https://github.com/fizixmastr}{\underline{github.com/fizixmastr}}
-\end{minipage}
+% \begin{minipage}[c]{0.05\textwidth}
+% \-\
+% \end{minipage}
+% \begin{minipage}[c]{0.2\textwidth}
+% \begin{tikzpicture}
+%     \clip (0,0) circle (1.75cm);
+%     \node at (0,-.7) {\includegraphics[width = 9cm]{portrait}}; 
+%     % if necessary the picture may be moved by changing the at (coordinates)
+%     % width defines the 'zoom' of the picture
+% \end{tikzpicture}
+% \hfill\vline\hfill
+% \end{minipage}
+% \begin{minipage}[c]{0.4\textwidth}
+%     \textbf{\Huge \scshape{Charles Rambo}} \\ \vspace{1pt} 
+%     % \scshape sets small capital letters, remove if desired
+%     \small{+1 123-456-7890} \\
+%     \href{mailto:you@provider.com}{\underline{you@provider.com}}\\
+%     % Be sure to use a professional *personal* email address
+%     \href{https://www.linkedin.com/in/charles-rambo/}{\underline{linkedin.com/in/charles-rambo}} \\
+%     % you should adjust you linked in profile name to be professional and recognizable
+%     \href{https://github.com/fizixmastr}{\underline{github.com/fizixmastr}}
+% \end{minipage}
 
 % Without picture
-%\begin{center}
-%    \textbf{\Huge \scshape Charles Rambo} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
-%    \small +1 123-456-7890 $|$ 
-%    \href{mailto:you@provider.com}{\underline{you@provider.com}} $|$\\
-%    % Be sure to use a professional *personal* email address
-%    \href{https://linkedin.com/in/your-name-here}{\underline{linkedin.com/in/charles-rambo}} $|$
-%    % you should adjust you linked in profile name to be professional and recognizable
-%    \href{https://github.com/fizixmastr}{\underline{github.com/fizixmastr}}
-%\end{center}
+\begin{center}
+    \textbf{\Huge \scshape Huanfa Chen} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
+    % \small +1 123-456-7890 $|$ 
+    \href{mailto:huanfa.chen@ucl.ac.uk}{\underline{huanfa.chen@ucl.ac.uk}} $|$\\
+    % Be sure to use a professional *personal* email address
+    \href{linkedin.com/in/huanfa-chen}{\underline{linkedin.com/in/huanfa-chen}} $|$
+    % you should adjust you linked in profile name to be professional and recognizable
+    \href{https://github.com/huanfachen}{\underline{github.com/huanfachen}}
+\end{center}
 
 
 
@@ -281,30 +294,143 @@ are seeking
       {Research assistant}{Oct 2015 -- Jan 2019}
       {Department of Civil, Environmental and Geomatic Engineering}{London, UK}
       \CVItemListStart
-        \CVItem{Part of the EPSRC-funded project 'Crime, Policing and Citizenship'}
+        \CVItem{Member of the EPSRC-funded project 'Crime, Policing and Citizenship'}
         \CVItem{Developed algorithms for predicting spatio-temporal crime hot-spots and dashboards}
       \CVItemListEnd
+  \CVSubHeadingListEnd
+
+%-----RESEARCH INTERESTS----------------------------------------------------------
+\begin{comment}
+try to briefly explain what you did and why it is relevant to the position you
+are seeking
+\end{comment}
+
+\section{Research Interests}
+  \CVSubHeadingListStart
+%    \CVSubheading %Example
+%      {What you did}{When you worked there}
+%      {Who you worked for}{Where they are located}
+%      \CVItemListStart
+%        \CVItem{Why it is important to this employer}
+%      \CVItemListEnd
+    \CVSubheading
+      {Geospatial machine learning}{}
+      {Applications in crime hotspot mapping, transport studies, public health, fire management}{}
+    \CVSubheading
+      {Spatial optimisation}{}
+      {Location-allocation analysis}{}
+    \CVSubheading
+      {Agent-based models}{}
+      {Spatially-explicit ABM}{}
   \CVSubHeadingListEnd
 
 %-----Publications----------------------------------------------------------
 \section{Publications}
 
 \vspace{2mm}
-\noindent \textbf{\textit{\ \ Most closely related}}
+\noindent \textbf{\ \ \underline{Refereed journals}}
 \begin{bibunit}
-% \nocite{apsrev42Control}
-\nocite{PirieNatPhys2020,MattPRB2020,WebbPRX2019,GozarNanoLett2017,HuangPRL2015}
+\nocite{apsrev42Control}
+\nocite{Chen2021jgsy, Chen2019ijgis, Chen2018ijgis, Chen2017CEUS, Ren2020ijgis, Zhang2021cities, Qiao2011langmuir, Qiao2011jpcc, Qiao2010jpcb}
 \putbib[publications]
 \end{bibunit}
 
 \vspace{2mm}
-\noindent \textbf{\textit{\ \ Other significant publications}}
+\noindent \textbf{\ \ \underline{Book chapters}}
+\begin{bibunit}
+\nocite{apsrev42Control}
+\nocite{Chen2021chapter}
+\putbib[publications]
+\end{bibunit}
+
+\vspace{2mm}
+\noindent \textbf{\ \ \underline{Papers under review}}
+\begin{bibunit}
+\nocite{apsrev42Control}
+\nocite{Huanfa2021trpc}
+\putbib[publications]
+\end{bibunit}
+
+\vspace{2mm}
+\noindent \textbf{\ \ \underline{Conference proceedings}}
+\begin{bibunit}
+\nocite{apsrev42Control}
+\nocite{Huanfa2020gisruk,Huanfa2019gisruk,Huanfa2017gisruk,Huanfa2017geocomp,Yajie2013geocomp,Huanfa2013ICESEP,Hamed2013ICESEP}
+\putbib[publications]
+\end{bibunit}
+
+\vspace{2mm}
+\noindent \textbf{\ \ \underline{Project reports}}
+\begin{bibunit}
+\nocite{apsrev42Control}
+\nocite{Cheng2016cpc}
+\putbib[publications]
+\end{bibunit}
+
+\vspace{2mm}
+\noindent \textbf{\ \ \underline{Software}}
+\begin{bibunit}
+% \nocite{apsrev42Control}
+\nocite{}
+\putbib[publications]
+\end{bibunit}
+
+\vspace{2mm}
+\noindent \textbf{\ \ \underline{Other significant publications}}
 \newbibstartnumber{6}
 \begin{bibunit}
 \nocite{apsrev42Control}
-\nocite{CominScience2014,ZeljkovicNanoLetters2014,SoumyanarayananPNAS2013,ZeljkovicScience2012,HoffmanScience2002qpi}
+% \nocite{CominScience2014,ZeljkovicNanoLetters2014,SoumyanarayananPNAS2013,ZeljkovicScience2012,HoffmanScience2002qpi}
 \putbib[publications]
 \end{bibunit}
+
+%-----PROJECTS AND RESEARCH----------------------------------------------------
+\begin{comment}
+\end{comment}
+
+\section{Research Supervision}
+\vspace{2mm}
+\begin{enumerate}
+   \item University College London, UK, 2019 -
+     \begin{enumerate}
+       \item \underline{PhD/EngD students (As co-supervisors)}
+       \begin{enumerate}
+           \item Xiaowei Gao (PhD Geographical Information Science, 2020 --)
+           \begin{itemize}
+            \textendash \ Research area: Spatio-temporal analytics of shared bicycle usage
+           \end{itemize}
+       \end{enumerate}
+       \item \underline{Master students (selected MSc/MRes projects)}
+       \begin{enumerate}
+           \MScStduentItem{Xiaomei Ge}{MSc Smart Cities and Urban Analytics}{2020 -- 2021}
+           {Thesis: Looking into home sharing platforms and their influence on local inequality and insecurity: a case study of London}
+           \MScStduentItem{Chuyin Deng} {MSc Spatial Data Science and Visualisation}{2020 -- 2021}
+            {Thesis: Exploring the influential factors of cases growth of COVID-19 with machine learning techniques}
+           \MScStduentItem{Zhenzhi Zhang}{MSc Spatial Data Science and Visualisation}{2020 -- 2021}
+            {Thesis: Understanding public confidence towards NHS by ordered logistics regression based on survey results}
+          \MScStduentItem{Xiang Zhou}{MSc Spatial Data Science and Visualisation}{2020 -- 2021}
+           {Thesis: Solving vehicle routing problems in supply chain using genetic algorithms: a case study in Shanghai}
+          \MScStduentItem{Yu Fu}{MSc Spatial Data Science and Visualisation}{2020 -- 2021}
+           {Thesis: A real-time forecast of electricity consumption in residential buildings using machine learning approaches}
+          \MScStduentItem{Thomas Keel}{MSc Spatial Data Science and Visualisation}{2019 -- 2020}
+           {Thesis: Can we predict why people travel within a city? A cast study in Montreal, Canada}
+          \MScStduentItem{Yang Zhou}{MSc Smart Cities and Urban Analytics}{2019 -- 2020}
+           {Thesis: Retail Centre Footfall: Planning and Forecasting Using Time Series Modelling}
+          \MScStduentItem{Yafei Ye}{MRes Spatial Data Science and Visualisation}{2019 -- 2020}
+           {Thesis: Understanding Residents’ Attitudes Towards Services and Safety Issues by Geodemographics Based on City Survey Results}
+          \MScStduentItem{Yunong Wang}{MSc Spatial Data Science and Visualisation}{2019 -- 2020}
+           {Thesis: Optimal Siting and Sizing of Electric Vehicle Charging Points: A Case Study in London}
+          \MScStduentItem{Maria del pilar Mayora}{MSc Smart Cities and Urban Analytics}{2019 -- 2020}
+           {Thesis: An Environmental Bicycle Level of Service Index for the Buenos Aires Cycle Network}
+          \MScStduentItem{Ziyi Cheng}{MSc Smart Cities and Urban Analytics}{2019 -- 2020}
+           {Thesis: Exploring the Spatial Accessibility to Green Space in the Greater London Area}
+
+% If you want to add a new student, use the following template
+        % \MScStduentItem{STUDENT_NAME}{MSc_PROGRAMME}{2019 -- 2020}
+        %   {Thesis: Exploring the Spatial Accessibility to Green Space in the Greater London Area}
+       \end{enumerate}
+     \end{enumerate}
+\end{enumerate}  
 
 %-----PROJECTS AND RESEARCH----------------------------------------------------
 \begin{comment}
@@ -313,61 +439,36 @@ like you should explain more about why the project is applicable to this job,
 use item list as is shown in the work experience section.
 \end{comment}
 
-\section{Projects and Research}
-  \CVSubHeadingListStart
-%    \CVSubheading
-%      {Title of Work}{When it was done}
-%      {Institution you worked with}{unused}
-    \CVSubheading
-      {{Surface Plasmon Propagation in the Kretschmann-Raether Configuration} $|$ \emph{\small{Python}}}{Fall 2020}
-      {University of Eastern Finland}{}
-    \CVSubheading
-      {{Simulation of Vector Beams Through High Numerical Aperture Lens} $|$ \emph{\small{Python}}}{Fall 2020}
-      {University of Eastern Finland}{}
-    \CVSubheading
-      {Characterization of the Flame-S Spectrometer for Spectral Imaging Research}{Spring 2020}
-      {University of Eastern Finland}{}
-    \CVSubheading
-      {{Free Form Lens Systems for 3D Printing} $|$ \emph{\small{MATLAB, OpTaliX}}}{Spring 2019}
-      {University of Eastern Finland}{}
-    \CVSubheading
-      {Procedures for Plating and Wet-Etching in III-V Semiconductor Devices}{Summer 2019}
-      {Finisar Corp.}{}
-    \CVSubheading
-      {Photo-Filter Characterization for Photometric Identification of Be Stars}{Fall 2017}
-      {Austin College}{}
-    \CVSubheading
-      {Improved Calibrating Equations for Volumetric Soil Moisture Measurement}{Spring 2017}
-      {Austin College}{}
-    \CVSubheading
-      {{Product Design, and Manufacturing Using 3D Printing} $|$ \emph{\small{Autodesk 123D}}}{Fall 2016}
-      {Austin College}{}
-  \CVSubHeadingListEnd
-
-%-----Publications--------------------------------------------
-\begin{comment}
-Again the title should have already been enough, but if it is necessary to add
-descriptions maintain the consistency from prior sections
-Subsections include 'Refereed journals', 'Book chapters', 'Papers under review'
-Numbered list
-\end{comment}
-
-\section{Publications}
-  \CVSubHeadingListStart
-%    \CVSubheading % Example
-%      {Work Presented}{When}
-%      {Occasion}{}
-    \CVSubheading
-      {Photometric Filter Fidelity and Use for Be Star Identification}{November 2017}
-      {Austin College Physics Research Seminar}{}
-    \CVSubheading
-      {Reflectometry for Volumetric Soil Moisture Measurement}{May 2017}
-      {Austin College Atmospheric Physics Fair}{}
-    \CVSubheading
-      {Design and Manufacturing of Products using 3D Printing}{April 2017}
-      {Austin College Student Scholarship Conference}{}
-  \CVSubHeadingListEnd
-
+% \section{Projects and Research}
+%   \CVSubHeadingListStart
+% %    \CVSubheading
+% %      {Title of Work}{When it was done}
+% %      {Institution you worked with}{unused}
+%     \CVSubheading
+%       {{Surface Plasmon Propagation in the Kretschmann-Raether Configuration} $|$ \emph{\small{Python}}}{Fall 2020}
+%       {University of Eastern Finland}{}
+%     \CVSubheading
+%       {{Simulation of Vector Beams Through High Numerical Aperture Lens} $|$ \emph{\small{Python}}}{Fall 2020}
+%       {University of Eastern Finland}{}
+%     \CVSubheading
+%       {Characterization of the Flame-S Spectrometer for Spectral Imaging Research}{Spring 2020}
+%       {University of Eastern Finland}{}
+%     \CVSubheading
+%       {{Free Form Lens Systems for 3D Printing} $|$ \emph{\small{MATLAB, OpTaliX}}}{Spring 2019}
+%       {University of Eastern Finland}{}
+%     \CVSubheading
+%       {Procedures for Plating and Wet-Etching in III-V Semiconductor Devices}{Summer 2019}
+%       {Finisar Corp.}{}
+%     \CVSubheading
+%       {Photo-Filter Characterization for Photometric Identification of Be Stars}{Fall 2017}
+%       {Austin College}{}
+%     \CVSubheading
+%       {Improved Calibrating Equations for Volumetric Soil Moisture Measurement}{Spring 2017}
+%       {Austin College}{}
+%     \CVSubheading
+%       {{Product Design, and Manufacturing Using 3D Printing} $|$ \emph{\small{Autodesk 123D}}}{Fall 2016}
+%       {Austin College}{}
+%   \CVSubHeadingListEnd
 
 %-----CONFERENCES AND PRESENTATIONS--------------------------------------------
 \begin{comment}
@@ -398,23 +499,39 @@ descriptions maintain the consistency from prior sections
 %      {What}{When}
 %      {Short Description}{}
     \CVSubheading
-      {Dean's List}{Fall 2017}
-      {Recognition for to 20\% of students in academics at Austin College}{}
+      {Roger Tomlinson Prize}{2018}
+      {Recognition for the best PhD thesis submitted to UCL which relates to the development of GIS}{UCL, UK}
     \CVSubheading
-      {Noyce STEM Education Leadership Scholarship}{June 2017}
-      {Merit based grant for students pursuing education in STEM fields}{}
+      {Finalist of EPSRC Connected Nation Pioneers Award}{2018}
+      {Recognition as one of 16 finalists of all UK PhD students due to pioneering research}{UK}
     \CVSubheading
-      {Stephens Scholarship}{May 2017}
-      {Merit based scholarship to support international study experiences within Austin College}{}
+      {Future Star Award in Shanghai Open Data Apps Competition}{2017}
+      {Team leader and algorithm designer}{Shanghai, China}
+      \CVItemListStart
+        \CVItem{Project title: Planning Docking Stations and Optimising Operations in Sharing Bicycle Management}
+      \CVItemListEnd
     \CVSubheading
-      {John D . Mosely Scholarship}{July 2016}
-      {Merit based scholarship requiring Austin College alumnus nomination}{}
+      {Travel Fund for Early-Career Researchers}{2017}
+      {Receive €300 to attend a three-day Workshop}{Leiden University, Netherlands}
+      \CVItemListStart
+        \CVItem{Workshop on 'Movement: New Sensors, New Data, New Challenges'}
+      \CVItemListEnd
     \CVSubheading
-      {Presidents List}{Spring 2016}
-      {Overall GPA above 3.8 at Austin College}{}
+      {UCL-CSC Joint Research Scholarship}{2014 -- 2018}
+      {Full PhD scholarship, including tuition fees and expenses.}{UCL, UK}
     \CVSubheading
-      {Eagle Scout}{April 2006}
-      {Highest level of achievement within the Boy Scouts of America}{}
+      {Excellent Prize in 2015 ISPRS-Scientific Initiative Open Data Challenge}{2015}
+      {Top 10/100 teams due to outstanding algorithm performance}{Shenzhen, China}
+    \CVSubheading
+      {Honourable Mention for Best Young Researcher Paper}{2015}
+      {Receiving \$500 in the first International Symposium on Spatiotemporal Computing}{Fairfax, US}
+    \CVSubheading
+      {China National Petroleum Corporation Scholarship in Peking University}{2010}
+      {Receiving \textyen5,000 due to outstanding academic performance as top 10/150 students}{Beijing, China}
+    \CVSubheading
+      {Merit Student Awards in Peking University}{2008}
+      {Awarded due to outstanding overall performance as top 20/150 students}{Beijing, China}
+      
   \CVSubHeadingListEnd
 
 %-----TEACHING EXPERIENCE------------------------------------------------------
@@ -429,31 +546,44 @@ Remember to tailor the resume for to the position.
 %      {What}{When}
 %      {School}{Where}
     \CVSubheading
-      {High School Physics (11 Weeks Teaching/Observing)}{Fall 2017}
-      {Denison High School}{Denison, TX}
+      {CASA0007: Quantitative Methods}{2019 -- Present}
+      {Teaching mathematical techniques for describing cities and geographies}{UCL}
     \CVSubheading
-      {High School Calculus (11 Weeks Teaching/Observing)}{Fall 2017}
-      {Denison High School}{Denison, TX}
+      {CASA0013: Introduction to Programming for Spatial Analysts)}{2019 -- Present}
+      {Python-based, covering pandas/geopandas/matplotlib/sklearn}{UCL}
     \CVSubheading
-      {High School Geometry (9 Weeks Teaching/Observing)}{Spring 2016}
-      {Sherman High School}{Sherman, TX}
+      {CASA0006: Data Science for Spatial Systems}{2019 -- Present}
+      {Statistical \& machine-learning for spatial analytics}{UCL}
+    \CVSubheading
+      {CASA0009: Spatial Data Capture, Storage, \& Analysis}{2019 -- Present}
+      {Various topics including MySQL, Javascript, web applications}{UCL}
+    \CVSubheading
+      {CASA0011: Agent Based Modelling for Spatial Systems}{2021 -- Present}
+      {Spatially-explicit agent-based models using NetLogo}{UCL}
+    \CVSubheading
+      {CASA0011: Agent Based Modelling for Spatial Systems}{2021 -- Present}
+      {Spatially-explicit agent-based models using NetLogo}{UCL}
+    \CVSubheading
+      {CEGE076: Spatio-Temporal Data Mining}{2015 -- 2021}
+      {Leading tutorials of spatio-temporal analytics using R \& NetLogo}{UCL}
+    \CVSubheading
+      {CEGE082: GIS Principles and Technology}{2016 -- 2017}
+      {Leading tutorials of ArcGIS analysis}{UCL}
   \CVSubHeadingListEnd
 
 %-----COMMUNITY INVOLVEMENT----------------------------------------------------
-\section{Community Involvement}
+\section{Leadership Experience}
   \CVSubHeadingListStart
 %    \CVSubheading %Example
 %      {What you did}{When you worked there}
 %      {Who you worked for}{Where they are located}
     \CVSubheading
-      {Austin College Community Tutors}{Fall 2017 -- Fall 2018}
-      {Free tutoring for local students in science and mathematics}{Sherman, TX}
+      {General Secretary of Peking University Alumni Association in UK}{2016 -- 2018}
+      {Coordinating 20-person committee and organising 150-person annual meetings.}{UK}
+    %   {Oversaw a 10\% membership boost compared to the previous year}
     \CVSubheading
-      {River Legacy Nature Center}{September 2015 -- August 2016}
-      {Provided assistance for various youth science education programs}{Arlington, TX}
-    \CVSubheading
-      {Back on My Feet Run Club}{April 2014 -- August 2015}
-      {Helping to reestablish homeless persons in the community}{Austin, TX}
+      {President of London PhD Network}{2016 -- Present}
+      {Hosting quarterly academic conferences and monthly seminars}{UK}
   \CVSubHeadingListEnd
 
 %-----SKILLS-------------------------------------------------------------------
@@ -465,9 +595,10 @@ recommends.
 \section{Skills}
  \begin{itemize}[leftmargin=0.5cm, label={}]
     \small{\item{
-     \textbf{Languages}{: English (Native), Spanish (B1), Finnish (A1)} \\
-     \textbf{Programming}{: Python (NumPy, SciPy, Matplotlib, Pandas), MATLAB, Mathematica, Java} \\
-     \textbf{Document Creation}{: Microsoft Office Suite, LaTex, Markdown} \\
+     \textbf{Languages}{: Madarin (Native), English (Fluent), Cantonese (Fluent), Teochew (Native)} \\
+     \textbf{Programming}{: Python, R, Java, C++, Linux Bash} \\
+     \textbf{Applications}{: Esri ArcGIS, Microsoft Office Suite, LaTex, Markdown} \\
+     \textbf{Interests}{: badminton, travel, reading, blogging} \\
     }}
  \end{itemize}
     
