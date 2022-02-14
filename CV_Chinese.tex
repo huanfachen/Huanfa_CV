@@ -7,7 +7,11 @@
 %------------------------------------------------------------------------------
 
 \documentclass[A4,11pt]{article}
+% \usepackage[UTF8]{ctex}
 %\documentclass[letterpaper,11pt]{article} %For use in US
+% \usepackage{xeCJK}
+% \usepackage{polyglossia}
+\usepackage{CJKutf8}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -19,7 +23,9 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{tikz}
-
+% \usepackage{xeCJK}
+% \usepackage{zh_CN-Adobefonts_external} 
+% \setCJKmainfont{SimSun}
 \input{glyphtounicode}
 
 \begin{comment}
@@ -184,6 +190,7 @@ strokes, sans-serif fonts are sans (without) these strokes.
 % CV STARTS HERE  %
 %------------------------------------------------------------------------------
 \begin{document}
+\begin{CJK*}{UTF8}{gbsn}
 \pagestyle{CVfooter}
 
 %-----HEADING------------------------------------------------------------------
@@ -191,41 +198,47 @@ strokes, sans-serif fonts are sans (without) these strokes.
 Avoid using photos in academic CV
 \end{comment}
 
-% \begin{minipage}[c]{0.05\textwidth}
-% \-\
-% \end{minipage}
-% \begin{minipage}[c]{0.2\textwidth}
-% \begin{tikzpicture}
-%     \clip (0,0) circle (1.75cm);
-%     \node at (0,-.7) {\includegraphics[width = 9cm]{portrait}}; 
-%     % if necessary the picture may be moved by changing the at (coordinates)
-%     % width defines the 'zoom' of the picture
-% \end{tikzpicture}
-% \hfill\vline\hfill
-% \end{minipage}
-% \begin{minipage}[c]{0.4\textwidth}
-%     \textbf{\Huge \scshape{Charles Rambo}} \\ \vspace{1pt} 
-%     % \scshape sets small capital letters, remove if desired
-%     \small{+1 123-456-7890} \\
-%     \href{mailto:you@provider.com}{\underline{you@provider.com}}\\
-%     % Be sure to use a professional *personal* email address
-%     \href{https://www.linkedin.com/in/charles-rambo/}{\underline{linkedin.com/in/charles-rambo}} \\
-%     % you should adjust you linked in profile name to be professional and recognizable
-%     \href{https://github.com/fizixmastr}{\underline{github.com/fizixmastr}}
-% \end{minipage}
-
-% Without picture
-\begin{center}
-    \textbf{\Huge \scshape Huanfa Chen} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
-    % \small +1 123-456-7890 $|$ 
-    \href{mailto:huanfa.chen@ucl.ac.uk}{\underline{huanfa.chen@ucl.ac.uk}} $|$
-    \href{huanfachen.github.io}{\underline{https://huanfachen.github.io/}} $|$\\
+\begin{minipage}[c]{0.05\textwidth}
+\-\
+\end{minipage}
+\begin{minipage}[c]{0.2\textwidth}
+\begin{tikzpicture}
+    % \clip (0,0) circle (1.75cm);
+    \node at (0,-.7) {\includegraphics[width = 3cm]{Photo_Huanfa_Chen.jpg}}; 
+    % if necessary the picture may be moved by changing the at (coordinates)
+    % width defines the 'zoom' of the picture
+\end{tikzpicture}
+\hfill\vline\hfill
+\end{minipage}
+\begin{minipage}[c]{0.05\textwidth}
+\-\
+\end{minipage}
+% \hfill
+\begin{minipage}[c]{0.4\textwidth}
+    \textbf{\Huge \scshape 陈焕发} \\ \vspace{1pt}
+    
+    % \textbf{陈焕发} \\ \vspace{1pt}
+    % \scshape sets small capital letters, remove if desired
+    \small{电话：+44 7737106369} \\
+    \small{微信：huanfa\_forever} \\
+    \href{mailto:chenhuanfa@gmail.com}{\underline{chenhuanfa@gmail.com}}\\
     % Be sure to use a professional *personal* email address
-    \href{linkedin.com/in/huanfa-chen}{\underline{linkedin.com/in/huanfa-chen}} $|$
+    \href{https://www.linkedin.com/in/huanfa-chen/}{\underline{linkedin.com/in/huanfa-chen}} \\
     % you should adjust you linked in profile name to be professional and recognizable
     \href{https://github.com/huanfachen}{\underline{github.com/huanfachen}}
-\end{center}
+\end{minipage}
 
+% Without picture
+% \begin{center}
+%     \textbf{\Huge \scshape Huanfa Chen} \\ \vspace{1pt} %\scshape sets small capital letters, remove if desired
+%     % \small +1 123-456-7890 $|$ 
+%     \href{mailto:huanfa.chen@ucl.ac.uk}{\underline{huanfa.chen@ucl.ac.uk}} $|$
+%     \href{huanfachen.github.io}{\underline{https://huanfachen.github.io/}} $|$\\
+%     % Be sure to use a professional *personal* email address
+%     \href{linkedin.com/in/huanfa-chen}{\underline{linkedin.com/in/huanfa-chen}} $|$
+%     % you should adjust you linked in profile name to be professional and recognizable
+%     \href{https://github.com/huanfachen}{\underline{github.com/huanfachen}}
+% \end{center}
 
 \begin{comment}
 This CV was written for specifically for positions I was applying for in
@@ -249,20 +262,20 @@ information though). Whatever order you choose be consistent throughout.
 \end{comment}
 
 %-----EDUCATION----------------------------------------------------------------
-\section{Education}
+\section{教育经历}
   \CVSubHeadingListStart
 %    \CVSubheading % Example
 %      {Degree Achieved}{Years of Study}
 %      {Institution of Study}{Where it is located}
     \CVSubheading
-      {{Doctor of Philosophy $|$ \emph{\small{Geographic Information Science}}}}{Sep 2014 -- Feb 2019}
-      {University College London}{London, UK}
+      {{\textbf{理学博士}  $,$ \emph{\small{地理信息科学}}}}{2014 -- 2019}
+      {伦敦大学学院（UCL）}{英国}
     \CVSubheading
-      {{Master of Science $|$ \emph{\small{Geographic Information Systems and Cartography}}}}{Sep 2011 -- July 2014}
-      {Peking University}{Beijing, China}
+      {{理学硕士  $,$ \emph{\small{地图学与地理信息系统}}}}{2011 -- 2014}
+      {北京大学}{中国}
     \CVSubheading
-      {{Bachelor of Science $|$ \emph{\small{Chemistry}}}}{Sep 2007 -- July 2011}
-      {Peking University}{Beijing, China} 
+      {{理学学士  $,$ \emph{\small{化学}}}}{2007 -- 2011}
+      {北京大学}{中国}
   \CVSubHeadingListEnd
 
 %-----WORK EXPERIENCE----------------------------------------------------------
@@ -271,7 +284,7 @@ try to briefly explain what you did and why it is relevant to the position you
 are seeking
 \end{comment}
 
-\section{Work Experience}
+\section{工作经历}
   \CVSubHeadingListStart
 %    \CVSubheading %Example
 %      {What you did}{When you worked there}
@@ -280,38 +293,38 @@ are seeking
 %        \CVItem{Why it is important to this employer}
 %      \CVItemListEnd
     \CVSubheading
-      {Lecturer in Spatial Data Science}{Oct 2020 --}
-      {Centre for Advanced Spatial Analysis, UCL}{London, UK}
+      {\textbf{讲师（助理教授）}，空间数据科学方向}{2020年10月 --}
+      {高级空间分析中心, UCL}{英国}
       \CVItemListStart
-        \CVItem{Lecture in postgraduate modules and supervise MSc and PhD projects}        
-        \CVItem{Deputy Department Tutor (since 2020)}
+        \CVItem{博士生导师；讲授研究生课程}        
+        \CVItem{副系教务主任 (2020年起)}
       \CVItemListEnd
     \CVSubheading
-    {Teaching Fellow in Spatial Data Science}{Feb 2019 --}
-      {Centre for Advanced Spatial Analysis, UCL}{London, UK}
+    {教员，空间数据科学方向}{2019年2月 --}
+      {高级空间分析中心, UCL}{英国}
       \CVItemListStart
-        \CVItem{Lecture in postgraduate modules and supervise MSc and PhD projects}        
-        \CVItem{Deputy Department Tutor (since 2020)}
+        \CVItem{博士生导师；讲授研究生课程}        
+        \CVItem{副系教务主任 (2020年起)}
       \CVItemListEnd
     \CVSubheading
-      {Guest Lecturer}{Jan 2019 --}
-      {School of Architecture and Cities, University of Westminster}{London, UK}
+      {客座教授}{2019年1月 --}
+      {建筑与城市学院, University of Westminster}{英国}
       \CVItemListStart
-        \CVItem{Lecture in GIS and spatial analysis}
+        \CVItem{讲授GIS和空间分析课程}
     \CVItemListEnd
     \CVSubheading
-      {Teaching assistant}{Oct 2014 -- Jan 2019}
-      {Department of Civil, Environmental and Geomatic Engineering}{London, UK}
+      {助教}{2014年10月 -- 2019年1月}
+      {土木环境与测绘系，UCL}{英国}
       \CVItemListStart
-        \CVItem{Lectured in “Agent-Based Simulation” as part of the Msc Course Spatio-Temporal Data Mining}
-        \CVItem{Led tutorials in R/Python/NetLogo}
+        \CVItem{讲授“多智能体仿真”硕士生课程}
+        \CVItem{主持R/Python/NetLogo习题课}
       \CVItemListEnd
      \CVSubheading
-      {Research assistant}{Oct 2015 -- Jan 2019}
-      {Department of Civil, Environmental and Geomatic Engineering}{London, UK}
+      {研究助理}{2015年10月 -- 2019年1月}
+      {土木环境与测绘系，UCL}{英国}
       \CVItemListStart
-        \CVItem{Member of the EPSRC-funded project 'Crime, Policing and Citizenship'}
-        \CVItem{Developed algorithms for predicting spatio-temporal crime hot-spots and dashboards}
+        \CVItem{参与"犯罪，警务与市民信心"科研项目，受英国物理与工程科学基金委（EPSRC）资助}
+        \CVItem{开发时空犯罪热点预测算法和可视化系统}
       \CVItemListEnd
   \CVSubHeadingListEnd
 
@@ -321,7 +334,7 @@ try to briefly explain what you did and why it is relevant to the position you
 are seeking
 \end{comment}
 
-\section{Research Interests}
+\section{研究兴趣}
   \CVSubHeadingListStart
 %    \CVSubheading %Example
 %      {What you did}{When you worked there}
@@ -330,21 +343,21 @@ are seeking
 %        \CVItem{Why it is important to this employer}
 %      \CVItemListEnd
     \CVSubheading
-      {Geospatial machine learning}{}
-      {Applications in crime hotspot mapping, transport studies, public health, fire management}{}
+      {时空人工智能}{}
+      {应用领域包括犯罪热点预测，公共卫生，火灾应急，交通出行行为建模等}{}
     \CVSubheading
-      {Spatial optimisation}{}
-      {Location-allocation analysis, routing, regionalization}{}
+      {空间优化}{}
+      {选址，路径规划，区域规划问题的算法开发和应用}{}
     \CVSubheading
-      {Spatial agent-based models}{}
-      {Applications in crime prevention and policing}{}
+      {空间多智能体仿真}{}
+      {应用领域包括犯罪预防和警察巡逻策略优化}{}
   \CVSubHeadingListEnd
 
 %-----Publications----------------------------------------------------------
-\section{Publications}
+\section{研究成果}
 
 \vspace{2mm}
-\noindent \textbf{\ \ \underline{Refereed journals}}
+\noindent \textbf{\ \ \underline{期刊论文}}
 \begin{bibunit}
 \nocite{apsrev42Control}
 \nocite{Chen2021, Chen2019ijgis, Chen2018ijgis, Chen2017CEUS, Aslam2021, Ren2020ijgis, Zhang2021cities, Qiao2011langmuir, Qiao2011jpcc, Qiao2010jpcb}
@@ -352,7 +365,7 @@ are seeking
 \end{bibunit}
 
 \vspace{2mm}
-\noindent \textbf{\ \ \underline{Book chapters}}
+\noindent \textbf{\ \ \underline{书籍章节}}
 \begin{bibunit}
 \nocite{apsrev42Control}
 \nocite{Chen2021chapter}
@@ -360,7 +373,7 @@ are seeking
 \end{bibunit}
 
 \vspace{2mm}
-\noindent \textbf{\ \ \underline{Papers under review}}
+\noindent \textbf{\ \ \underline{正在评审论文}}
 \begin{bibunit}
 \nocite{apsrev42Control}
 \nocite{Huanfa2021trans}
@@ -368,7 +381,7 @@ are seeking
 \end{bibunit}
 
 \vspace{2mm}
-\noindent \textbf{\ \ \underline{Conference proceedings}}
+\noindent \textbf{\ \ \underline{会议论文}}
 \begin{bibunit}
 \nocite{apsrev42Control}
 \nocite{Huanfa2020gisruk,Huanfa2019gisruk,Huanfa2017gisruk,Huanfa2017geocomp,Yajie2013geocomp,Huanfa2013ICESEP,Hamed2013ICESEP}
@@ -376,7 +389,7 @@ are seeking
 \end{bibunit}
 
 \vspace{2mm}
-\noindent \textbf{\ \ \underline{Project reports}}
+\noindent \textbf{\ \ \underline{项目报告}}
 \begin{bibunit}
 \nocite{apsrev42Control}
 \nocite{Cheng2016cpc}
@@ -384,7 +397,7 @@ are seeking
 \end{bibunit}
 
 \vspace{2mm}
-\noindent \textbf{\ \ \underline{Software}}
+\noindent \textbf{\ \ \underline{软件项目}}
 \begin{bibunit}
 % \nocite{apsrev42Control}
 \nocite{}
@@ -392,7 +405,7 @@ are seeking
 \end{bibunit}
 
 \vspace{2mm}
-\noindent \textbf{\ \ \underline{Other significant publications}}
+\noindent \textbf{\ \ \underline{其他研究成果}}
 \newbibstartnumber{6}
 \begin{bibunit}
 \nocite{apsrev42Control}
@@ -404,12 +417,12 @@ are seeking
 \begin{comment}
 \end{comment}
 
-\section{Research Supervision}
+\section{指导学生}
 \vspace{2mm}
 \begin{enumerate}
-   \item University College London, UK, 2019 -
+   \item 伦敦大学学院, 英国, 2019 --
      \begin{enumerate}
-       \item \underline{PhD/EngD students (As co-supervisors)}
+       \item \underline{博士生 (作为第二导师)}
        \begin{enumerate}
            \item Xiaowei Gao (PhD Geographical Information Science, 2020 --)
            \begin{itemize}
@@ -420,7 +433,7 @@ are seeking
             \item[$\textendash$] \ Research area: Urban analytics based on street-view imagery
            \end{itemize}
        \end{enumerate}
-       \item \underline{Master students (selected MSc/MRes projects)}
+       \item \underline{硕士生 (共指导30名硕士生，以下是部分学生的论文题目)}
        \begin{enumerate}
            \MScStduentItem{Lingru Feng}{MSc Spatial Data Science and Visualisation}{2020 -- 2021}
            {Thesis: Comparing Floating Catchment Area Methods for Measuring Spatial Accessibility to COVID-19 Vaccination Service in England}
@@ -508,75 +521,75 @@ Again the title should have already been enough, but if it is necessary to add
 descriptions maintain the consistency from prior sections
 \end{comment}
 
-\section{Conferences and Presentations}
-\noindent \textbf{\ \ \underline{Invited Presentations}}
+\section{会议报告}
+\noindent \textbf{\ \ \underline{受邀报告}}
   \CVSubHeadingListStart
 %    \CVSubheading % Example
 %      {Work Presented}{When}
 %      {Occasion}{}
     \CVSubheading
-      {Geospatial machine learning: motivations and implications}{May 2020}
-      {Tianjin University [Online]}{}
+      {Geospatial machine learning: motivations and implications}{2020年5月}
+      {天津大学建筑学院}{}
     \CVSubheading
-      {Machine learning for urban analytics and transport studies}{March 2021}
-      {Chinese Academy of Surveying and Mapping [Online]}{}
+      {Machine learning for urban analytics and transport studies}{2021年3月}
+      {中国测绘科学研究院}{}
     % \CVSubheading
     %   {Design and Manufacturing of Products using 3D Printing}{April 2017}
     %   {Austin College Student Scholarship Conference}{}
   \CVSubHeadingListEnd
 
 %-----HONORS AND AWARDS--------------------------------------------------------
-\section{Honors and Awards}
+\section{荣誉和奖励}
   \CVSubHeadingListStart
 %    \CVSubheading %Example
 %      {What}{When}
 %      {Short Description}{}
     \CVSubheading
-      {UCL Q-Step Internship Programme}{2021}
-      {\textsterling 3,000 Support for supervising the 6-week internship project}{UCL, UK}
+      {UCL Q-Step学生实习项目}{2021}
+      {\textsterling 3,000 资助，指导本科生科研项目}{UCL, 英国}
       \CVItemListStart
-        \CVItem{Title: Evaluating and Comparing accessibility to Covid-19 vaccination services across different countries}
+        \CVItem{科研项目：评估全球多国家的Covid-19疫苗服务的可达性}
       \CVItemListEnd
     % \CVSubheading
     \CVSubheading
       {2019 AAG Applied Geography Specialty Group Project Development Award}{2019}
-      {\$500 Support for the research project: Uncovering the underlying demand of sharing bicycles in urban areas}{US}
+      {\$500 资助，支持“预测城市地区共享单车需求”的研究项目}{美国}
     \CVSubheading
       {2019 AAG Applied Geography Specialty Group Travel Award}{2019}
-      {\$250 Support for attending the AAG annual event}{US}
+      {\$250 参会补贴}{US}
     \CVSubheading
-      {Roger Tomlinson Prize}{2018}
-      {Recognition for the best PhD thesis submitted to UCL which relates to the development of GIS}{UCL, UK}
+      {Roger Tomlinson论文奖}{2018}
+      {由ESRI公司资助，授予UCL指导的地理信息科学方向最佳博士论文}{UCL, 英国}
     \CVSubheading
-      {Finalist of EPSRC Connected Nation Pioneers Award}{2018}
-      {Recognition as one of 16 finalists of all UK PhD students due to pioneering research}{UK}
+      {EPSRC互联社会先行者比赛决赛选手}{2018}
+      {由英国物理与工程科学基金会发起的比赛，全英国共500名多领域的博士生参赛，决赛名单共16人}{英国}
     \CVSubheading
-      {Future Star Award in Shanghai Open Data Apps Competition}{2017}
-      {Team leader and algorithm designer}{Shanghai, China}
+      {上海开放数据应用大赛“明日之星”奖励}{2017}
+      {领队，负责项目管理和算法开发}{上海，中国}
       \CVItemListStart
-        \CVItem{Project title: Planning Docking Stations and Optimising Operations in Sharing Bicycle Management}
+        \CVItem{项目内容：共享单车的站点选址和运营优化}
       \CVItemListEnd
     \CVSubheading
-      {Travel Fund for Early-Career Researchers}{2017}
-      {Receive €300 to attend a three-day Workshop}{Leiden University, Netherlands}
+      {年轻研究者的旅行补贴}{2017}
+      {获得 €300 资助，以参加研讨会}{Leiden University, 荷兰}
       \CVItemListStart
-        \CVItem{Workshop on 'Movement: New Sensors, New Data, New Challenges'}
+        \CVItem{研讨会主题："移动模式：新传感器，新数据，新挑战"}
       \CVItemListEnd
     \CVSubheading
-      {UCL-CSC Joint Research Scholarship}{2014 -- 2018}
-      {Full PhD scholarship, including tuition fees and expenses.}{UCL, UK}
+      {UCL-CSC 联合博士奖学金}{2014 -- 2018}
+      {博士全额奖学金，资助期限四年}{UCL, 英国}
     \CVSubheading
-      {Excellent Prize in 2015 ISPRS-Scientific Initiative Open Data Challenge}{2015}
-      {Top 10/100 teams due to outstanding algorithm performance}{Shenzhen, China}
+      {2015年ISPRS开发数据全球挑战赛优秀奖}{2015}
+      {作为队长，带队在初赛排名前十（共100个队伍参赛）}{深圳大学, 中国}
     \CVSubheading
-      {Honourable Mention for Best Young Researcher Paper}{2015}
-      {Receiving \$500 in the first International Symposium on Spatiotemporal Computing}{Fairfax, US}
+      {最佳青年学者论文提名奖}{2015}
+      {在首届时空计算国际会议获得 \$500 奖励}{乔治梅森大学, 美国}
     \CVSubheading
-      {China National Petroleum Corporation Scholarship in Peking University}{2010}
-      {Receiving \textyen5,000 due to outstanding academic performance as top 10/150 students}{Beijing, China}
+      {北京大学-中石油奖学金}{2010}
+      {学业成绩在全年级排名前10/150；奖金 \textyen5,000}{北京大学, 中国}
     \CVSubheading
-      {Merit Student Awards in Peking University}{2008}
-      {Awarded due to outstanding overall performance as top 20/150 students}{Beijing, China}
+      {北京大学三好学生}{2008}
+      {学业成绩在全年级排名前20/150}{北京大学, China}
       
   \CVSubHeadingListEnd
 
@@ -586,76 +599,76 @@ Section is here as it applied to my application for positions in academia.
 Remember to tailor the resume for to the position.
 \end{comment}
 
-\section{Teaching Experience}
+\section{教学经历}
   \CVSubHeadingListStart
 %    \CVSubheading
 %      {What}{When}
 %      {School}{Where}
     \CVSubheading
-      {CASA0007: Quantitative Methods}{2019 --}
-      {Teaching mathematical techniques for describing cities and geographies}{UCL}
+      {CASA0007: 定量方法}{2019 --}
+      {教授城市研究和空间分析的数学方法基础}{UCL}
     \CVSubheading
-      {CASA0013: Introduction to Programming for Spatial Analysts}{2019 --}
-      {Hands-on Python course, covering pandas/geopandas/matplotlib/sklearn}{UCL}
+      {CASA0013: 空间数据科学基础}{2019 --}
+      {基于Python的空间数据科学, 涵盖pandas/geopandas/matplotlib/sklearn}{UCL}
     \CVSubheading
-      {CASA0006: Data Science for Spatial Systems}{2019 --}
-      {Statistical \& machine-learning methods for spatial analysis}{UCL}
+      {CASA0006: 空间数据科学}{2019 --}
+      {基于统计学习和机器学习的空间分析方法}{UCL}
     \CVSubheading
-      {CASA0009: Spatial Data Capture, Storage, \& Analysis}{2019 --}
-      {Various topics including MySQL, Javascript, web applications}{UCL}
+      {CASA0009: 空间数据获取，存储与分析}{2019 --}
+      {涵盖MySQL数据库, Javascript, 网站建设}{UCL}
     \CVSubheading
-      {CASA0011: Agent Based Modelling for Spatial Systems}{2021 --}
-      {Spatially-explicit agent-based models using NetLogo}{UCL}
+      {CASA0011: 空间多智能体模型}{2021 --}
+      {基于NetLogo编程的空间显式多智能体模型}{UCL}
     \CVSubheading
-      {CEGE0076: Spatio-Temporal Data Mining}{2015 -- 2021}
-      {Leading tutorials of spatio-temporal analytics using R \& NetLogo}{UCL}
+      {CEGE0076: 时空数据挖掘}{2015 -- 2021}
+      {基于R语言，介绍时空数据挖掘常用模型和方法}{UCL}
     \CVSubheading
-      {CEGE0082: GIS Principles and Technology}{2016 -- 2017}
-      {Leading tutorials of ArcGIS analysis}{UCL}
+      {CEGE0082: GIS思想与方法}{2016 -- 2017}
+      {讲授基于ArcGIS的GIS习题课}{UCL}
   \CVSubHeadingListEnd
 
 %-----COMMUNITY INVOLVEMENT----------------------------------------------------
-\section{Professional Activities}
-\noindent \textbf{\ \ \underline{Professional Membership}}
+\section{协会活动}
+\noindent \textbf{\ \ \underline{协会会员}}
   \CVSubHeadingListStart
 %    \CVSubheading %Example
 %      {What you did}{When you worked there}
 %      {Who you worked for}{Where they are located}
     \CVSubheading
-      {Member, the American Association of Geographers}{2015 -- }
+      {会员, 美国地理学家协会}{2015 -- }
       {}{}
   \CVSubHeadingListEnd
 
-\noindent \textbf{\ \ \underline{Professional Service}}
+\noindent \textbf{\ \ \underline{协会任职}}
   \CVSubHeadingListStart
 %    \CVSubheading %Example
 %      {What you did}{When you worked there}
 %      {Who you worked for}{Where they are located}
     \CVSubheading
-      {Board Member, the Chinese Professionals in Geographic Information Sciences}{2021 -- }
+      {理事会成员, 国际华人地理信息科学协会}{2021 -- }
       {}{}
     \CVSubheading
-      {General Secretary, Peking University Alumni Association in UK}{2016 -- 2018}
-      {Coordinating 20-person committee and organising 150-person annual meetings.}{UK}
+      {秘书长，北京大学全英校友会}{2016 -- 2018}
+      {协调20人的理事会，组织150名参会人员的年会}{英国}
     %   {Oversaw a 10\% membership boost compared to the previous year}
     \CVSubheading
-      {President, London PhD Network}{2016 --}
-      {Hosting quarterly academic conferences and monthly seminars}{UK}
+      {主席, 伦敦博士联盟}{2016 --}
+      {组织多学科领域的学术研讨会；协会共有800名成员}{英国}
   \CVSubHeadingListEnd
 
-\section{Editorship}
+\section{期刊编辑}
   \CVSubHeadingListStart
     \CVSubheadingSimple
-      {Editor Board Member, Humanities and Social Sciences Communications}{2022 --}
+      {编委会成员, Humanities and Social Sciences Communications}{2022 --}
       
     \CVSubheading
-      {Guest Editor on Covid-19 Impact on Human Mobility}{2021 -- 2022}
+      {客座编辑，负责Covid-19 Impact on Human Mobility特刊}{2021 -- 2022}
       {Geo-spatial Information Science}{}
       
   \CVSubHeadingListEnd
 
-\section{Referee}
-\noindent \textbf{\ \ \underline{Journal}}
+\section{评审经历}
+\noindent \textbf{\ \ \underline{期刊审稿}}
   \CVSubHeadingListStart
 
     \CVSubheadingSimple
@@ -677,15 +690,16 @@ This section is compressed from the various skills sections that Euro CV
 recommends.
 \end{comment}
 
-\section{Skills}
+\section{技能}
  \begin{itemize}[leftmargin=0.5cm, label={}]
     \small{\item{
-     \textbf{Languages}{: Mandarin (Native), English (Fluent), Cantonese (Fluent), Teochew (Native)} \\
-     \textbf{Programming}{: Python, R, Java, C++, Linux Bash} \\
-     \textbf{Applications}{: Esri ArcGIS, Microsoft Office Suite, LaTex, Markdown} \\
-     \textbf{Interests}{: badminton, travel, reading, blogging} \\
+     \textbf{语言}{: 普通话, 英语, 粤语，潮汕话} \\
+     \textbf{编程}{: Python, R, Java, C++, Linux Bash} \\
+     \textbf{软件系统}{: Esri ArcGIS, Microsoft Office Suite, LaTex, Markdown} \\
+     \textbf{业余兴趣}{: 羽毛球, 旅行, 阅读, 博客写作} \\
     }}
  \end{itemize}
     
 %------------------------------------------------------------------------------
+\end{CJK*}
 \end{document}
