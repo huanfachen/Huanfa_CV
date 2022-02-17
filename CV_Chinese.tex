@@ -11,6 +11,7 @@
 %\documentclass[letterpaper,11pt]{article} %For use in US
 % \usepackage{xeCJK}
 % \usepackage{polyglossia}
+\usepackage{seqsplit}
 \usepackage{CJKutf8}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -293,7 +294,7 @@ are seeking
 %        \CVItem{Why it is important to this employer}
 %      \CVItemListEnd
     \CVSubheading
-      {\textbf{讲师（助理教授）}，空间数据科学方向}{2020年10月 --}
+      {\textbf{讲师（助理教授）}, 空间数据科学方向}{2020年10月 --}
       {高级空间分析中心, UCL}{英国}
       \CVItemListStart
         \CVItem{博士生导师；讲授研究生课程}        
@@ -342,20 +343,29 @@ are seeking
 %      \CVItemListStart
 %        \CVItem{Why it is important to this employer}
 %      \CVItemListEnd
-    \CVSubheading
+    \CVSubheadingSimple
       {空间优化}{}
-      {选址，路径规划，区划等问题的模型开发，应用于城市管理/犯罪预防/警员巡逻}{}
-    \CVSubheading
+      \CVItemListStart
+        \CVItem{开发新型模型和高性能算法，以解决公共设施选址/路径规划/区划等优化问题}        
+        \CVItem{应用于城市管理/犯罪预防/警员巡逻等}
+      \CVItemListEnd
+     \CVSubheadingSimple
       {时空人工智能}{}
-      {基于时空大数据的人工智能模型研发，并应用于预测犯罪热点，交通流量等}{}
-    \CVSubheading
+      \CVItemListStart
+        \CVItem{研发时空大数据驱动的神经网络模型和算法}        
+        \CVItem{应用于预测犯罪热点/交通流量等}
+      \CVItemListEnd
+     \CVSubheadingSimple
       {城市居民移动模式}{}
-      {融合经济计量学和机器学习模型，预测和理解居民的出行交通模式和目的}{}
-    \CVSubheading
+      \CVItemListStart
+        \CVItem{融合经济计量学和机器学习模型，预测和理解居民的个体出行交通模式和目的}        
+      \CVItemListEnd
+     \CVSubheadingSimple
       {健康GIS}{}
-      {应用GIS方法以理解传染病的时空模式，并制定防控措施}{}
-
-    
+      \CVItemListStart
+        \CVItem{应用GIS方法以理解传染病（例如Covid-19）的时空模式}
+        \CVItem{评估防控措施的效果（例如居民疫苗接种率的时空变异特征和影响因素）}
+      \CVItemListEnd
   \CVSubHeadingListEnd
 
 %-----Publications----------------------------------------------------------
